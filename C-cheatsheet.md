@@ -14,7 +14,7 @@ This should be _returned_ at the end of ``ìnt main(){}`` method to properly exi
 
 ```printf("This will be echoed in the standard out");```
 
-####### Printf formatters
+###### Printf formatters
 
 - ```%d``` for an integer
 - ```%f``` for a floating point number
