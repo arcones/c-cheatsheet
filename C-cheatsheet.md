@@ -4,6 +4,9 @@ C Cheatsheet
 ##### Import libraries
 ```#include <stdio.h>```
 
+##### Import local header files
+```#include "myFunctions.h"```
+
 ##### Exit codes
 - 0 when the program finished successfully
 - Any number greater than 1 when it doesn't
