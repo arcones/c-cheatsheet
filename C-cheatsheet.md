@@ -19,6 +19,7 @@ This should be _returned_ at the end of ``ìnt main(){}`` method to properly exi
 - ```%d``` for an integer
 - ```%f``` for a floating point number
 - ``%.2f`` for a floating point number truncated to two decimal positions 
+- ```%s``` for strings
 
 Of course, the proper library should be imported to invoke such function.
 
@@ -44,3 +45,52 @@ char vowels[][5] = {
     {'a', 'e', 'i', 'o', 'u'}
 };
 ``
+Size of an array:
+``` 
+int a[17];
+size_t n = sizeof(a)/sizeof(a[0]);
+return site_t; 
+```
+
+##### Strings
+Read-only string:
+```char * name = "John Smith";```
+Read and write string:
+```
+char name[] = "John Smith";
+/*
+watch out!!! it contains at the end the char '\0' (string termination) which is invisible, 
+so its length is visible chars + 1!!
+*/
+```
+To know the length of a string:
+```
+strlen(aString)
+```
+To compare strings:
+```
+strncmp(aString, anotherString, maxComparisonWidth) //Will only return 0 if the compared parts are equal
+
+// if(strncmp(... , ... , ...) == 0)
+
+```
+To concatenate:
+```
+char destination[20]="Hello";
+char source[20]="World";
+strncat(destination,source,5); //HelloWorld
+strncat(destination,source,20); //HelloWorldWorld
+```
+The last int parameter is to select the max num of characters from source to append, or its length, it the parameter is greater.
+Watch out!! As strings are arrays and they are objects, they are *passed by reference*
+
+Other way to concatenate:
+```
+char name[]="Marta";
+char surname[]="Arcones";
+char result[100];
+sprintf(result,"%s %s",name,surname);
+printf("%s\n",result); // will print "Marta Arcones"
+```
+To delete contents of a string to reuse:
+```myString[0] ='\0';```
