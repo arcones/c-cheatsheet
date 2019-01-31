@@ -38,7 +38,7 @@ Be aware, for calculations to be resolved properly, set all the variables involv
 
 ##### Arrays
 For example:
-```int numbers[10];``
+```int numbers[10];```
 ``
 char vowels[][5] = {
     {'A', 'E', 'I', 'O', 'U'},
@@ -46,7 +46,7 @@ char vowels[][5] = {
 };
 ``
 Size of an array:
-``` 
+```
 int a[17];
 size_t n = sizeof(a)/sizeof(a[0]);
 return site_t; 
