@@ -14,7 +14,7 @@ This should be _returned_ at the end of ``ìnt main(){}`` method to properly exi
 
 ```printf("This will be echoed in the standard out");```
 
-####### Printf formatters
+###### Printf formatters
 
 - ```%d``` for an integer
 - ```%f``` for a floating point number
@@ -94,3 +94,22 @@ printf("%s\n",result); // will print "Marta Arcones"
 ```
 To delete contents of a string to reuse:
 ```myString[0] ='\0';```
+
+
+##### Loops
+```
+// while
+int n = 0;
+while (n < 10) {
+    printf("The value of the index of the loop is %d\n", n);
+    n++;
+}
+
+
+//for
+int i;
+for (i = 0; i < 10; i++) {
+    printf("The value of the index of the loop is %d\n", i);
+}
+
+```
