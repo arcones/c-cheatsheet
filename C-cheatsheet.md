@@ -25,7 +25,7 @@ Of course, the proper library should be imported to invoke such function.
 
 ##### Data types
 - Signed Integers: ```char```, ```int```, ```short```, ```long```, ```long long```
-- Unsigned Integers: same as before but with ``ùnsigned`` prefix
+- Unsigned Integers: same as before but with ``unsigned`` prefix
 - Floating point numbers: ```float```, ```double```
 - Define boolean data type:
 ```
@@ -58,7 +58,9 @@ return site_t;
 
 ##### Strings
 Read-only string:
-```char * name = "John Smith";```
+```
+char * name = "John Smith";
+```
 Read and write string:
 ```
 char name[] = "John Smith";
@@ -69,7 +71,7 @@ so its length is visible chars + 1!!
 ```
 To know the length of a string:
 ```
-strlen(aString)
+strlen(aString);
 ```
 To compare strings:
 ```
@@ -86,7 +88,7 @@ strncat(destination,source,5); //HelloWorld
 strncat(destination,source,20); //HelloWorldWorld
 ```
 The last int parameter is to select the max num of characters from source to append, or its length, it the parameter is greater.
-Watch out!! As strings are arrays and they are objects, they are *passed by reference*
+Watch out!! As strings are arrays and they are objects, they are __passed by reference!!!__
 
 Other way to concatenate:
 ```
@@ -96,8 +98,10 @@ char result[100];
 sprintf(result,"%s %s",name,surname);
 printf("%s\n",result); // will print "Marta Arcones"
 ```
-To delete contents of a string to reuse:
-```myString[0] ='\0';```
+To delete contents of a string to reuse it:
+```
+myString[0] ='\0';
+```
 
 ##### Loops
 ```
