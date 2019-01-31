@@ -26,7 +26,7 @@ Of course, the proper library should be imported to invoke such function.
 ##### Data types
 - Signed Integers: ```char```, ```int```, ```short```, ```long```, ```long long```
 - Unsigned Integers: same as before but with ``ùnsigned`` prefix
-- Floating point numbers: ```float```, ```double``
+- Floating point numbers: ```float```, ```double```
 - Define boolean data type:
 ```
 #define BOOL char
@@ -38,13 +38,17 @@ Be aware, for calculations to be resolved properly, set all the variables involv
 
 ##### Arrays
 For example:
-```int numbers[10];```
-``
+```
+int numbers[10];
+```
+or
+```
 char vowels[][5] = {
     {'A', 'E', 'I', 'O', 'U'},
     {'a', 'e', 'i', 'o', 'u'}
 };
-``
+```
+
 Size of an array:
 ```
 int a[17];
