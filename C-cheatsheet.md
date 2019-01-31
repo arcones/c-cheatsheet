@@ -95,7 +95,6 @@ printf("%s\n",result); // will print "Marta Arcones"
 To delete contents of a string to reuse:
 ```myString[0] ='\0';```
 
-
 ##### Loops
 ```
 // while
