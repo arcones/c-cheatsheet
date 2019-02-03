@@ -123,3 +123,35 @@ for (i = 0; i < 10; i++) {
 }
 
 ```
+
+##### Functions
+- Arguments are passed *by value* unless in the case of pointers.
+- Functions should be *declared first*
+- Their default scope is all the project 
+```
+/* function declaration */
+int foo(int bar);
+
+int main() {
+    /* calling foo from main */
+    printf("The value of foo is %d", foo(1));
+}
+
+int foo(int bar) {
+    return bar + 1;
+}
+```
+
+##### Static
+- In case is used with a variable, it increases its scope up to the file containing them   
+- In case is used with a function, it decreases its scope down to the file containing them   
+```
+// variables
+static int count = 0;
+
+//functions
+static void fun(void) {
+   printf("I am a static function.");
+}
+
+```
