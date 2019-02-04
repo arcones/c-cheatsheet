@@ -101,7 +101,7 @@ char result[100];
 sprintf(result,"%s %s",name,surname);
 printf("%s\n",result); // will print "Marta Arcones"
 ```
-To delete contents of a string to reuse it:
+Take note that all the strings created will have the null terminator `/0` at the end. This null terminator can also be used to delete the contents of a string variable in order to reuse it:
 ```
 myString[0] ='\0';
 ```
@@ -155,3 +155,54 @@ static void fun(void) {
 }
 
 ```
+
+##### Pointers
+They are simple integers that holds a memory address that points to a value, instead of holding the actual value itself.
+For example, this line:
+```
+char * name = "Arcones";
+
+```
+will create the string `Arcones` somewhere in the memory and the position of the first character `A` will be stored in `name` variable.
+
+###### Dereferencing
+Dereferencing is the act of referring to where the pointer points, for example:
+```
+int a = 1;
+
+int * pointer_to_a = &a;
+
+printf("The value a is %d\n", a);
+printf("The value of a is also %d\n", *pointer_to_a);
+```
+So:
+- `*a_pointer` is the way to access the actual value behind the pointer
+- `&a_variable` is the way to access to the memory address of a variable  
+
+##### Structures
+Are large variables which contain several *named* variables inside.
+```
+struct point {
+    int x;
+    int y;
+};
+
+struct point p;
+p.x = 10;
+p.y = 5;
+```
+For *customize* the struct name:
+```
+typedef struct {
+    char * brand;
+    int model;
+} vehicle;
+
+vehicle mycar;
+mycar.brand = "Ford";
+mycar.model = 2007;
+```
+
+
+###### References
+http://www.learn-c.org
