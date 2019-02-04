@@ -203,6 +203,57 @@ mycar.brand = "Ford";
 mycar.model = 2007;
 ```
 
+###### Function arguments by reference
+This is the only way to modify a variable inside a function and see the result outside it:
+```
+void addone(int * n) {
+    (*n)++;
+}
+
+int n = 0;
+printf("Before: %d\n", n); //this will print "Before: 0"
+addone(&n);
+printf("After: %d\n", n); //this will print "After: 1"
+```
+This is widely used to modify structs members:
+```
+void move(point * p) {
+    (*p).x++;
+    (*p).y++;
+}
+```
+or with its equivalent:
+```
+void move(point * p) {
+    p->x++;
+    p->y++;
+}
+```
+
+###### Dynamic allocation
+Allocating memory dynamically is used to store data without initially knowing its size. For example:
+```
+typedef struct {
+    char * name;
+    int age;
+} person;
+
+person * myPerson = malloc(sizeof(person));
+/*
+malloc will dynamically allocate just enough to hold a 
+person struct in memory, returning a pointer to its first memory position
+
+malloc declaration is in stdlib.h
+*/
+/*
+sizeof will tell malloc the bit length of the person
+*/
+```
+Then, we will use standard pointer notation to access `myPerson` members.
+It is important to free up memory when the pointer is not required any more:
+```
+free(myPerson);
+```
 
 ###### References
 http://www.learn-c.org
