@@ -255,5 +255,25 @@ It is important to free up memory when the pointer is not required any more:
 free(myPerson);
 ```
 
+###### Recursion
+A recursive method consists in two main parts:
+ - A terminating case that indicates when the recursion will finish
+ - A call to itself that must make progress towards the terminating case
+For example:
+```
+#include <stdio.h>
+
+unsigned int multiply(unsigned int x, unsigned int y) {
+    if (x == 1) {
+        return y;
+    }
+    else if (x > 1) {
+        return y + multiply(x-1, y);
+    }
+    return 0;
+}
+```
+
+
 ###### References
 http://www.learn-c.org
